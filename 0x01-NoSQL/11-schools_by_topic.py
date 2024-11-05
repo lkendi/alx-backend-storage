@@ -14,4 +14,6 @@ def update_topics(mongo_collection, name, topic):
         name: name of the school
         topics: list of topics approached in the school
     """
+    if not mongo_collection:
+        return []
     return mongo_collection.find({"topics":  {"$in": [topic]}})
