@@ -13,4 +13,6 @@ def update_topics(mongo_collection, topic):
         mongo_collection: a pymongo collection object
         topics: list of topics approached in the school
     """
+    if not mongo_collection:
+        return None
     return mongo_collection.find({"topics": topic})
