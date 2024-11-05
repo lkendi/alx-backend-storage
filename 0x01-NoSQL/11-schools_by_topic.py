@@ -5,7 +5,7 @@ Module that returns the list of school having a specific topic
 import pymongo
 
 
-def update_topics(mongo_collection, name, topic):
+def update_topics(mongo_collection, topic):
     """
     Function that changes all topics of a school document based on the name
 
